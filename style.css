@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lato&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    background: purple;
+    width: 100%;
+    height: 80px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lato', sans-serif;
+    z-index: 5;
+}
+
+label.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+nav ul {
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    
+}
+
+nav li {
+    display: inline;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    
+}
+nav a{
+    color: white;
+    padding: 7px 15px;
+    background: transparent;
+    /* border-radius: 10px; */
+    cursor: pointer;
+   
+}
+a.active , a:hover{
+    
+    border: 2px solid white;
+}
+label.bars i{
+color: white;
+font-size: 25px;
+display: none;
+cursor: pointer;
+
+}
+
+@media (max-width: 800px) {
+    nav li {
+       margin: 5px;
+        
+    }
+}
+@media (max-width: 650px) {
+    nav ul{
+        background: purple;
+        margin-right: 0px;
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+       left: -100%;
+       transition:all  .5s;
+       z-index: 5;
+
+    }
+    label.bars i{
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        display: block;
+    }
+    nav li{
+        display: flex;
+    
+        flex-direction: column;
+        align-items: center; 
+          
+        line-height: 20px;  
+        margin-top: 30px;  
+    }
+    nav ul li a{
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    nav ul.show{
+        left: 0px;
+       
+    }
+}
+
+
+
+/* ##############  FOOD SECTION #################### */
+
+
+.foodbtn{
+    padding: 10px 30px;
+    font-size: 15px;
+    border: 1px solid  rgb(30, 12, 82);
+    background-color: rgb(30, 12, 82);
+    color: white;
+    cursor: pointer;
+}
+
+.foodmenusection{
+    text-align: center;
+}
+
+.foodtype{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 4vh;
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: row;
+    line-height: 4vh;
+}
+.image{
+    margin-right: 2vw;
+    margin-top: 2vh;
+}
+.left{
+    position: relative;
+    top: 10vh;
+    left: 15vw;
+}
+
+.right{
+    position: relative;
+    top: 10vh;
+    left: 25vw;
+}
+.foodprice{
+    display: flex;
+    flex-direction: row;
+  background-color: transparent;
+  width: 90vw;
+  height: 80vh;
+  position: relative;
+  top: 5vh;
+}
+
+@media (max-width: 1500px) {
+    .left{
+        left: 5vh;
+
+    }
+    .right{
+        left: 15vh;
+    }
+}
+@media (max-width: 800px) {
+    .foodprice{
+        flex-direction: column;
+        /* position: relative;
+        left: 12vw; */
+        text-align: center;
+        height: 150vh;
+    }
+    .menu{
+        width: 50vw;
+        line-height: 3vh;
+        margin-top: 5vh;
+    }
+    .left{
+        width: 60vw;
+        left: 25vw;
+    }
+    .right{
+        width: 60vw;
+        display: none;
+        left: 25vw;
+    }
+    /* .foodtype{
+        position: relative;
+        left: 12vw;
+    } */
+    
+}
+
+input {
+    width: 20vw;
+    height: 5vh;
+   margin-top: 4vh;
+   padding: 10px;
+}
+textarea{
+    width: 25vw;
+    height: 8vh;
+    position: relative;
+    left: 8vw;
+    margin-top: 4vh;
+}
+.submitbtn{
+    width: 10vw;
+    height: 5vh;
+    position: relative;
+    top: 5vh;
+    left: -10vw;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.reservationimg{
+    width: 40vw;
+    height: 60vh;
+}
+.reservation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    top: 5vh;
+    background-color: rgb(47, 13, 108);
+    padding: 10vh 0vh;
+    margin-bottom: 10vh;
+}
+.formsec h3,h1{
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    .reservation{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .formsec{
+        position: relative;
+        top: 5vh;
+        left: 5vw;
+    }
+
+    .reservationimg{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    input {
+        width: 40vw;
+        height: 5vh;
+       margin-top: 4vh;
+       padding: 10px;
+       
+    }
+    textarea{
+        width:80vw;
+        height: 8vh;
+        position: relative;
+        left: 8vw;
+        margin-top: 4vh;
+    }
+    .submitbtn{
+        width: 30vw;
+        height: 5vh;
+        left: 31vw;
+      
+    }
+}
+.footer{
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialmedias a i{
+    font-size: 30px;
+    margin-right: 5vw;
+} 
+.fa-instagram{
+    margin-right: 0;
+}
+.footer span{
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer span{
+        margin-bottom: 20px;
+    }
+.socialmedias a i{
+margin-left: 40px;
+}
+}
+@media (max-width: 1500px) {
+    .footer{
+        margin-top: 5vh;
+    }
+}
